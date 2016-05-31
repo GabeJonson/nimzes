@@ -1,0 +1,12 @@
+-var imgPath = '../img/'
+mixin img(name)
+    img(src="#{imgPath}#{name}", alt="")
+
+mixin figure(name, text, position)
+    figure
+        if position
+            .image(class="#{position}_line"): img(src="#{imgPath}#{name}", alt="")
+        else
+            img(src="#{imgPath}#{name}", alt="")
+        if text
+            figcaption #{text}
