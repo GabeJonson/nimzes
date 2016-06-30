@@ -1,0 +1,21 @@
+{
+  "name": "Name",
+  "description": "Description",
+  "main": "src/html/index.html",
+  "authors": [
+    "http://vk.com/gabejonson"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/GabeJonson/my_gulp",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "normalize-scss": "normalize.scss#^6.0.0",    
+    "components-font-awesome": "^4.7.0"
+  }
+}

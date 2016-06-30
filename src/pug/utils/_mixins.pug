@@ -1,0 +1,10 @@
+mixin img(file_name)
+	img(src=imgPath + file_name, alt="")&attributes(attributes)
+
+mixin figure(file_name)
+	figure.image-container&attributes(attributes)
+		+img(file_name)
+
+mixin list-link(href, text)
+	li&attributes(attributes)
+		a(href=href) #{text}

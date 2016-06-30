@@ -1,35 +1,34 @@
 {
-  "name": "proj",
+  "name": "Name",
   "version": "1.0.0",
-  "description": "work",
-  "main": "gulpfile.js",
+  "description": "Description",
+  "main": "src/html/index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "begin": "npm install && bower install && MOVE ./src/bower/components-font-awesome/fonts ./src/fonts",
+    "start": "gulp",
+    "build": "rm -rf build && gulp b"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/GabeJonson/gulp_default.git"
+    "url": "Link 2 project repository"
   },
-  "author": "Reclamare 2016",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/GabeJonson/gulp_default/issues"
-  },
-  "homepage": "https://github.com/GabeJonson/gulp_default#readme",
+  "author": "http://vk.com/gabejonson",
+  "homepage": "Home page of repository",
   "devDependencies": {
     "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^3.1.0",
-    "gulp-babel": "^6.1.2",
+    "gulp-autoprefixer": "^3.1.1",
     "gulp-concat": "^2.6.0",
-    "gulp-connect": "^2.3.1",
-    "gulp-csso": "^1.1.0",
+    "gulp-connect": "^5.0.0",
+    "gulp-csso": "^2.0.0",
     "gulp-html-validator": "0.0.5",
     "gulp-htmlhint": "^0.3.1",
-    "gulp-imagemin": "^2.4.0",
+    "gulp-cssmin": "^0.1.7",
+    "gulp-imagemin": "^3.0.3",
     "gulp-livereload": "^3.8.1",
-    "gulp-sass": "^2.3.1",
-    "gulp-sourcemaps": "^1.6.0",
-    "gulp-uglify": "^1.5.3",
-    "gulp-jade": "1.1.0"
-  }
+    "gulp-pug": "^3.1.0",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^2.2.0",
+    "gulp-uglify": "^2.0.0"
+  },
+  "license": "MIT"
 }

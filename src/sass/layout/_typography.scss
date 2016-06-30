@@ -1,0 +1,17 @@
+// fonts
+
+// font
+html {
+	@include mobile       { font-size: $mobile-font; }
+	@include tablet       { font-size: $tablet-font; }
+	@include tablet-land  { font-size: $tablet-land-font; }
+	@include desc         { font-size: $desktop-font; }
+	@include desc-big     { font-size: $desktop-wild-font; }
+}
+
+@each $size in $heading-sizes {
+	$key: index($heading-sizes, $size);
+	h#{$key}, .h#{$key} { font-size: rem($size); }
+}
+
+p { font-size: rem(30); }

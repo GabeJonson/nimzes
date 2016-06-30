@@ -1,4 +1,17 @@
+# IDE
 /.idea
+/.idea/*
+
+#develop modules
 /bower_components
 /node_modules
 /.sass-cache
+
+#develop folder
+/src/bower
+/src/css
+/src/html
+/src/fonts
+
+#build folder
+/build
