@@ -27,6 +27,12 @@ $half-gutter-width: $gutter-width * .5;
   padding-left: $outer-margin;
 }
 
+.container {
+  max-width: $max-width;
+  margin-left: auto;
+  margin-rigth: auto;
+}
+
 .row {
   box-sizing: border-box;
   @include flexbox();
