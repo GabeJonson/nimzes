@@ -18,8 +18,8 @@
     $height: nth($size, 2);
   }
 
-  width: $width;
-  height: $height;
+  min-width: $width;
+  min-height: $height;
 }
 
 @mixin max-size($size) {
@@ -30,8 +30,8 @@
     $height: nth($size, 2);
   }
 
-  width: $width;
-  height: $height;
+  max-width: $width;
+  max-height: $height;
 }
 
 @mixin omega-reset($nth) {
