@@ -5,6 +5,9 @@ mixin figure(file_name)
 	figure.image-container&attributes(attributes)
 		+img(file_name)
 
-mixin list-link(href, text)
+mixin list-link(href, text, linkClass)
 	li&attributes(attributes)
-		a(href=href) #{text}
+		if linkClass
+			a(href=href, class=linkClass)= text
+		else 
+			a(href=href)= text

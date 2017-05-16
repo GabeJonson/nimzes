@@ -4,17 +4,14 @@
 	box-sizing: border-box;
 }
 
-.wrap-container { @include outer-container; }
-
-.clear { @include clear; }
-
 li { list-style: none; }
 
-a[href] { text-decoration: none; }
+a { text-decoration: none; }
 
 figure { margin: 0; }
 
-.image-container img {
+.image-container img,
+.responsive-image {
 	@include size(100% auto);
 	display: block;
 }
