@@ -17,3 +17,23 @@ figure { margin: 0; }
 }
 
 .relative { position: relative; }
+
+.text- {
+  &center { text-align: center; }
+
+  &left { text-align: left; }
+
+  &right { text-align: right; }
+
+  &uppercase { text-transform: uppercase; }
+}
+
+.hidden-sm {
+  @include mobile {
+    display: block;
+  }
+
+  @include tablet {
+    display: none;
+  }
+}
