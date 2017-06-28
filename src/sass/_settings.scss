@@ -17,6 +17,3 @@ $grid-columns:          $column;
 $gutter-width:          $gutter;
 $outer-margin:          0.938rem !default;
 $flexboxgrid-max-width: $max-width;
-// ????
-$gutter-compensation: $gutter-width * .5 * -1;
-$half-gutter-width:   $gutter-width * .5;
