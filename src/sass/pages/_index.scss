@@ -1,0 +1,150 @@
+main {
+  @include mobile { padding-bottom: 150px; }
+
+  .image-container {
+    @include size(100% 900px);
+    @include max-size(525px 620px);
+    margin: 0 auto;
+    background: {
+      image: url(../img/bitmap.png);
+      size: cover;
+      position: 50% 50%;
+      repeat: no-repeat;
+    }
+
+    @include mobile {
+      @include max-size(287px 386px);
+    }
+
+    @media (-webkit-min-device-pixel-ratio: 2) {
+      .image-container {
+        background: {
+          image: url(../img/bitmap@2x.png);
+          size: cover;
+        }
+      }
+    }
+  }
+
+  .right-position {
+    padding-top: 30px;
+    text-align: center;
+
+    @include tablet-land { text-align: left; }
+  }
+
+  h1 {
+    margin-bottom: 50px;
+    @include font(60px, bold, 60px);
+
+    @include mobile {
+      @include max-size(187px null);
+      font-size: 24px;
+      line-height: 27px;
+      margin: {
+        right: auto;
+        bottom: 20px;
+        left: auto;
+      }
+    }
+
+    @include tablet {
+       @include max-size(370px null);
+       margin: {
+         right: auto;
+         left: auto;
+       }
+     }
+
+     @include tablet-land {
+       margin: {
+         right: 0;
+         left: 0;
+       }
+     }
+
+    .new-line {
+      @include tablet-land { display: block; }
+    }
+  }
+
+  p {
+    @include max-size(385px null);
+    margin-bottom: 30px;
+    @include font(23px, 400, 27px);
+
+    @include mobile {
+      @include max-size(265px null);
+      font-size: 13px;
+      line-height: 17px;
+      margin: {
+        right: auto;
+        left: auto;
+      }
+    }
+
+    @include tablet {
+      @include max-size(415px null);
+      margin: {
+        right: auto;
+        left: auto;
+      }
+    }
+
+    @include tablet-land {
+      margin: {
+        right: 0;
+        left: 0;
+      }
+    }
+  }
+
+  a.video {
+    color: $white;
+
+    &:after {
+      content: '';
+      @include size(68% 2px);
+      background-color: $white;
+      position: absolute;
+      bottom: -3px;
+      right: 0;
+      transition: 0.2s;
+      transform: scale(0);
+    }
+
+    &:hover {
+      text-decoration: none;
+      color: $white;
+
+      &:after { transform: scale(1); }
+    }
+
+    .fa {
+      @include size(30px);
+      margin-right: 12px;
+      font-size: 12px;
+      line-height: 28px;
+      text-align: center;
+      border: 1px solid $white;
+      border-radius: 50%;
+    }
+  }
+
+  .marketplace {
+    margin: {
+      top: 60px;
+      bottom: 120px;
+    }
+
+    @include tablet-land { margin-bottom: 0; }
+
+    .market {
+      display: inline-block;
+
+      &.ios {
+        @include mobile { margin-bottom: 20px; }
+      }
+    }
+  }
+}

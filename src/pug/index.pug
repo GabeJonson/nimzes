@@ -1,6 +1,23 @@
 extends layout/_main
 
 block title
-  | The title
+  | Nimses
 
 block content
+  main.container
+    .row
+      .left-position.col-md-6
+        .image-container
+      .right-position.col-xs-12.col-md-6
+        h1.text-uppercase turn time #[span.new-line into value]
+        p Nims replace likes. With nims you can like other people, not just their pics, videos and posts.
+        p Individual nimbs are easily comparable, you can see nimb sizes of everyone who is geographically nearby in real time.
+        a.video.text-uppercase.relative(href='#') #[i.fa.fa-play] learn more
+        
+        .marketplace
+          .market.ios
+            a(href='#')
+              +img('appstore.jpg')
+          .market.android
+            a(href='#')
+              +img('playmarket.jpg')

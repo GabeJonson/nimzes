@@ -63,3 +63,11 @@
     clear: both;
   }
 }
+
+@mixin font($size, $weight, $line: 16px) {
+  font: {
+    size: $size;
+    weight: $weight;
+  }
+  line-height: $line;
+}

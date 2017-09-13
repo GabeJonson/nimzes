@@ -1,1 +1,14 @@
-footer
+include ../utils/_mixins
+include ../utils/_varibles
+
+footer.footer
+  .container
+    ul.nav.navbar-nav
+      each item in footer
+        +list-link('#', item, 'text-uppercase')
+    ul.nav.navbar-nav.navbar-right.social
+      each item in social
+        li
+          a(href=item.link, style=`background-image: url(${imgPath}social.jpg)`)
+      li.nimses-copy
+        a.text-uppercase(href='#') &copy; nimses

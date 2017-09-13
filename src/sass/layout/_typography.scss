@@ -1,7 +1,28 @@
-// fonts
-
-// font
-@each $size in $heading-sizes {
-	$key: index($heading-sizes, $size);
-	h#{$key}, .h#{$key} { font-size: rem($size); }
+@font-face {
+    font-family: 'geometria';
+    src: url('#{$font-path}geometria-medium-webfont.woff2') format('woff2'),
+         url('#{$font-path}geometria-medium-webfont.woff') format('woff'),
+         url('#{$font-path}geometria-medium-webfont.svg#geometriamedium') format('svg');
+    font-weight: 500;
+    font-style: normal;
 }
+
+@font-face {
+    font-family: 'geometria';
+    src: url('#{$font-path}geometria-bold-webfont.woff2') format('woff2'),
+         url('#{$font-path}geometria-bold-webfont.woff') format('woff'),
+         url('#{$font-path}geometria-bold-webfont.svg#geometriabold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'geometria';
+    src: url('#{$font-path}geometria-webfont.woff2') format('woff2'),
+         url('#{$font-path}geometria-webfont.woff') format('woff'),
+         url('#{$font-path}geometria-webfont.svg#geometriaregular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+}
+
+$main-font: 'geometria';

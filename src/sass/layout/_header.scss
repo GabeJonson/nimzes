@@ -1,3 +1,102 @@
 header {
-	
+	.navbar-default {
+		.navbar-nav {
+			& > li > a {
+				@include font(13px, 500, 20px);
+				color: $white;
+
+				&:not(.dropdown-toggle):after {
+					content: '';
+					@include size(100% 2px);
+					background-color: $white;
+					position: absolute;
+					bottom: 10px;
+					left: 0;
+					transition: 0.2s;
+					transform: scale(0);
+				}
+
+				&:focus {
+					color: $white;
+					background-color: transparent;
+				}
+
+				&:hover {
+					color: $white;
+
+					&:after { transform: scale(1); }
+
+					@include mobile { color: $black; }
+				 }
+
+				@include mobile { color: $black; }
+
+				@include tablet-land {
+					margin: 0 25px;
+					padding: {
+						right: 0;
+						left: 0;
+					}
+				}
+			}
+
+			& > .open > a {
+				color: $white;
+				background-color: transparent;
+
+				&:focus, &:hover {
+					color: $white;
+					background-color: transparent;
+
+					@include mobile { color: $black; }
+				}
+			}
+		}
+
+		.navbar-collapse {
+			@include size(100% null);
+
+			@include mobile {
+				@include size(100vw null);
+				background-color: $white;
+				position: absolute;
+				top: 50px;
+				left: -15px;
+				z-index: 2;
+			}
+		}
+
+		.navbar-nav .open .dropdown-menu {
+			padding: 0;
+
+			@include mobile { color: $black; }
+
+			& > li > a {
+				padding: {
+					top: 5px;
+					bottom: 5px;
+				}
+				transition: all 0.3s;
+
+				&:hover {
+					color: $white;
+					background-color: $black;
+				}
+
+				@include mobile { padding-left: 20px; }
+			}
+		}
+
+		.navbar-toggle {
+			&:hover { background-color: transparent; }
+
+			@include mobile {
+				margin: {
+					top: 10px;
+					right: 0;
+				}
+				border: 0;
+			}
+		}
+	}
 }

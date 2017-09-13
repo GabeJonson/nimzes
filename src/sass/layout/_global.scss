@@ -4,6 +4,17 @@
 	box-sizing: border-box;
 }
 
+html, body {
+	@include min-size(null 100%);
+	position: relative;
+}
+
+body {
+	font-family: $main-font;
+	color: $white;
+	background-color: $black;
+}
+
 li { list-style: none; }
 
 a { text-decoration: none; }
@@ -29,11 +40,24 @@ figure { margin: 0; }
 }
 
 .hidden-sm {
-  @include mobile {
-    display: block;
-  }
+  @include mobile { display: block; }
 
-  @include tablet {
-    display: none;
-  }
+  @include tablet { display: none; }
+}
+
+.navbar {
+	background-color: transparent;
+	border: 0;
+}
+
+.dropdown-menu { @include min-size(auto null); }
+
+.caret { transform: translateY(-2px); }
+
+@media screen and (min-width: 1200px) {
+	.container { width: 1360px; }
+}
+
+@include mobile {
+	.navbar-brand { padding: 15px 0; }
 }
